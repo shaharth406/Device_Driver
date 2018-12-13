@@ -1,0 +1,54 @@
+We can create device file in two ways:
+
+1) manually
+2) Automatically
+
+we can create manually by using mknod command
+
+mknod -m permission name device_type major minor
+
+name- name of our device file
+device_type- char. or block device file c for char b for block
+major,minor- major - minor no of your driver
+-m permission - its optional argument that sets the permission bits of the new device. we can change after using chmod command.
+
+Note: all device file are stored in /dev directory.
+
+ex: sudo mknod -m 666 /dev/my_device c 289 0
+
+Here we note that whatever device name we gave is given by full path only.
+
+2)Automatically
+
+For automatically creation of device file we have to create two structure create_class and create_device 
+here we have to pass address of class in 1st arg. of create_device
+
+include 2 header file : linux/device.h and linux/kdev_t.h
+
+there are 3 API to remember
+
+1)alloc_chrdev_region(*dev,first_minor,count,name);
+
+dev- output parameter it's hold major no which one allocate dynamically
+first_minor-generally its 0
+count- no of device for common major means minor no for common major no
+name-name of driver which one you want to give
+
+2)class_create(struct module* owner,name);
+owner – pointer to the module that is to “own” this struct class(THIS_MODULE - this argument is macro its defined as struct module 0)
+name- class name
+
+after completion of this module we must destroy class by using : void class_destroy (struct class * cls); 
+
+3)struct device *device_create (struct *class, struct device *parent, dev_t dev,void *drv_data, const char *fmt, ...);
+
+class= pass struct class pointer here which we create previously
+parent – pointer to the parent struct device of this new device, if any
+dev= dev_t for char device
+derived_class=NULL
+name-device_name
+
+after completion of this module we must destroy device by using : void device_destroy (struct class * class, dev_t devt);
+
+
+here you must know when we destroy device we have to give address of class instead of created device

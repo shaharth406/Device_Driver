@@ -1,0 +1,815 @@
+cscope 15 $HOME/Arth/DRIVER_ARG               0000004935
+	@test_arg.c
+
+12 
+	~<löux/kî√l.h
+>
+
+13 
+	~<löux/öô.h
+>
+
+14 
+	~<löux/moduÀ.h
+>
+
+15 
+	~<löux/moduÀ∑øm.h
+>
+
+21 
+	#GPL_LICENSE
+ "GPL"
+
+	)
+
+22 
+	#DRIVER_MODULE_AUTHOR
+ "SPANIDEA"
+
+	)
+
+23 
+	#DRIVER_MODULE_DESC
+ "Sim∂êHñlÿW‹ld ModuÀ "
+
+	)
+
+24 
+	#DRIVER_MODULE_VERSION
+ "V1.0"
+
+	)
+
+33 
+	gvÆue
+, 
+	g¨r_vÆue
+[4];
+
+34 *
+	g«me
+;
+
+35 
+	gcb_vÆue
+ = 0;
+
+43 
+moduÀ_∑øm
+(
+vÆue
+, , 
+S_IRUSR
+|
+S_IWUSR
+);
+
+44 
+moduÀ_∑øm
+(
+«me
+, 
+ch¨p
+, 
+S_IRUSR
+|
+S_IWUSR
+);
+
+45 
+moduÀ_∑øm_¨øy
+(
+¨r_vÆue
+, , 
+NULL
+, 
+S_IRUSR
+|
+S_IWUSR
+);
+
+48 
+	$nŸify_∑øm
+(c⁄° *
+vÆ
+, c⁄° 
+kî√l_∑øm
+ *
+kp
+)
+
+50 
+ªs
+ = 
+	`∑øm_£t_öt
+(
+vÆ
+, 
+kp
+);
+
+51 if(
+ªs
+==0) {
+
+52 
+	`¥ötk
+(
+KERN_INFO
+ "Call back function called...\n");
+
+53 
+	`¥ötk
+(
+KERN_INFO
+ "New vÆuêo‡cb_vÆuê%d\n", 
+cb_vÆue
+);
+
+57 
+	}
+}
+
+59 c⁄° 
+kî√l_∑øm_›s
+ 
+	gmy_∑øm_›s
+ =
+
+61 .
+£t
+ = &
+nŸify_∑øm
+,
+
+62 .
+	ggë
+ = &
+∑øm_gë_öt
+,
+
+65 
+moduÀ_∑øm_cb
+(
+cb_vÆue
+, &
+my_∑øm_›s
+, &cb_vÆue, 
+S_IRUGO
+|
+S_IWUSR
+ );
+
+68 
+__öô
+ 
+	$hñlo_w‹ld_öô
+()
+
+70 
+i
+;
+
+71 
+	`¥ötk
+(
+KERN_INFO
+ "VÆuê%d \n", 
+vÆue
+);
+
+72 
+	`¥ötk
+(
+KERN_INFO
+ "cb_vÆuê%d \n", 
+cb_vÆue
+);
+
+73 
+	`¥ötk
+(
+KERN_INFO
+ "Namê%†\n", 
+«me
+);
+
+74 
+i
+ = 0; i < ( 
+¨r_vÆue
+ /  ()); i++) {
+
+75 
+	`¥ötk
+(
+KERN_INFO
+ "Aº_vÆue[%d] = %d\n", 
+i
+, 
+¨r_vÆue
+[i]);
+
+77 
+	`¥ötk
+(
+KERN_INFO
+ "Kernel Module Inserted Successfully...\n");
+
+79 
+	}
+}
+
+81 
+__exô
+ 
+	$hñlo_w‹ld_exô
+()
+
+83 
+	`¥ötk
+(
+KERN_INFO
+ "Kernel Module Removed Successfully...\n");
+
+84 
+	}
+}
+
+86 
+moduÀ_öô
+(
+hñlo_w‹ld_öô
+);
+
+87 
+moduÀ_exô
+(
+hñlo_w‹ld_exô
+);
+
+89 
+MODULE_LICENSE
+(
+GPL_LICENSE
+);
+
+90 
+MODULE_AUTHOR
+(
+DRIVER_MODULE_AUTHOR
+);
+
+91 
+MODULE_DESCRIPTION
+(
+DRIVER_MODULE_DESC
+);
+
+92 
+MODULE_VERSION
+(
+DRIVER_MODULE_VERSION
+);
+
+	@test_arg.mod.c
+
+1 
+	~<löux/moduÀ.h
+>
+
+2 
+	~<löux/vîmagic.h
+>
+
+3 
+	~<löux/compûî.h
+>
+
+5 
+MODULE_INFO
+(
+vîmagic
+, 
+VERMAGIC_STRING
+);
+
+7 
+__visibÀ
+ 
+moduÀ
+ 
+__this_moduÀ
+
+
+8 
+__©åibuã__
+((
+£˘i⁄
+(".gnu.linkonce.this_module"))) = {
+
+9 .
+«me
+ = 
+KBUILD_MODNAME
+,
+
+10 .
+	göô
+ = 
+öô_moduÀ
+,
+
+11 #ifde‡
+CONFIG_MODULE_UNLOAD
+
+
+12 .
+	gexô
+ = 
+˛ónup_moduÀ
+,
+
+14 .
+	g¨ch
+ = 
+MODULE_ARCH_INIT
+,
+
+17 #ifde‡
+RETPOLINE
+
+
+18 
+MODULE_INFO
+(
+ªçﬁöe
+, "Y");
+
+21 c⁄° 
+modvîsi⁄_öfo
+ 
+	g____vîsi⁄s
+[]
+
+22 
+__u£d
+
+
+23 
+__©åibuã__
+((
+£˘i⁄
+("__versions"))) = {
+
+24 { 0xódeda83, 
+__VMLINUX_SYMBOL_STR
+(
+moduÀ_œyout
+) },
+
+25 { 0x7ec7e674, 
+__VMLINUX_SYMBOL_STR
+(
+∑øm_›s_ch¨p
+) },
+
+26 { 0xÁ8b9545, 
+__VMLINUX_SYMBOL_STR
+(
+∑øm_›s_öt
+) },
+
+27 { 0x3349525, 
+__VMLINUX_SYMBOL_STR
+(
+∑øm_¨øy_›s
+) },
+
+28 { 0x560b0c1, 
+__VMLINUX_SYMBOL_STR
+(
+∑øm_gë_öt
+) },
+
+29 { 0x27e1a049, 
+__VMLINUX_SYMBOL_STR
+(
+¥ötk
+) },
+
+30 { 0x987e895, 
+__VMLINUX_SYMBOL_STR
+(
+∑øm_£t_öt
+) },
+
+31 { 0xbdfb6dbb, 
+__VMLINUX_SYMBOL_STR
+(
+__„¡ry__
+) },
+
+34 c⁄° 
+	g__moduÀ_dïíds
+[]
+
+35 
+__u£d
+
+
+36 
+__©åibuã__
+((
+£˘i⁄
+(".modinfo"))) =
+
+40 
+MODULE_INFO
+(
+§cvîsi⁄
+, "81AA00700C410975036DC80");
+
+	@/usr/include/linux/kernel.h
+
+1 #i‚de‡
+_LINUX_KERNEL_H
+
+
+2 
+	#_LINUX_KERNEL_H
+
+
+	)
+
+4 
+	~<löux/sysöfo.h
+>
+
+9 
+	#__ALIGN_KERNEL
+(
+x
+, 
+a
+Ë
+	`__ALIGN_KERNEL_MASK
+(x, (
+	`ty≥of
+(x))◊Ë- 1)
+
+	)
+
+10 
+	#__ALIGN_KERNEL_MASK
+(
+x
+, 
+mask
+Ë(((xË+ (mask)Ë& ~(mask))
+
+	)
+
+	@/usr/include/linux/sysinfo.h
+
+1 #i‚de‡
+_LINUX_SYSINFO_H
+
+
+2 
+	#_LINUX_SYSINFO_H
+
+
+	)
+
+4 
+	~<löux/ty≥s.h
+>
+
+6 
+	#SI_LOAD_SHIFT
+ 16
+
+	)
+
+7 
+	ssysöfo
+ {
+
+8 
+__kî√l_l⁄g_t
+ 
+	mu±ime
+;
+
+9 
+__kî√l_ul⁄g_t
+ 
+	mlﬂds
+[3];
+
+10 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆøm
+;
+
+11 
+__kî√l_ul⁄g_t
+ 
+	m‰ìøm
+;
+
+12 
+__kî√l_ul⁄g_t
+ 
+	msh¨edøm
+;
+
+13 
+__kî√l_ul⁄g_t
+ 
+	mbuf„ºam
+;
+
+14 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆsw≠
+;
+
+15 
+__kî√l_ul⁄g_t
+ 
+	m‰ìsw≠
+;
+
+16 
+__u16
+ 
+	m¥ocs
+;
+
+17 
+__u16
+ 
+	m∑d
+;
+
+18 
+__kî√l_ul⁄g_t
+ 
+	mtŸÆhigh
+;
+
+19 
+__kî√l_ul⁄g_t
+ 
+	m‰ìhigh
+;
+
+20 
+__u32
+ 
+	mmem_unô
+;
+
+21 
+	m_f
+[20-2*(
+__kî√l_ul⁄g_t
+)-(
+__u32
+)];
+
+	@/usr/include/linux/types.h
+
+1 #i‚de‡
+_LINUX_TYPES_H
+
+
+2 
+	#_LINUX_TYPES_H
+
+
+	)
+
+4 
+	~<asm/ty≥s.h
+>
+
+6 #i‚de‡
+__ASSEMBLY__
+
+
+8 
+	~<löux/posix_ty≥s.h
+>
+
+16 #ifde‡
+__CHECKER__
+
+
+17 
+	#__bôwi£__
+ 
+	`__©åibuã__
+((
+bôwi£
+))
+
+	)
+
+19 
+	#__bôwi£__
+
+
+	)
+
+21 #ifde‡
+__CHECK_ENDIAN__
+
+
+22 
+	#__bôwi£
+ 
+__bôwi£__
+
+
+	)
+
+24 
+	#__bôwi£
+
+
+	)
+
+27 
+__u16
+ 
+	t__bôwi£
+ 
+	t__À16
+;
+
+28 
+__u16
+ 
+	t__bôwi£
+ 
+	t__be16
+;
+
+29 
+__u32
+ 
+	t__bôwi£
+ 
+	t__À32
+;
+
+30 
+__u32
+ 
+	t__bôwi£
+ 
+	t__be32
+;
+
+31 
+__u64
+ 
+	t__bôwi£
+ 
+	t__À64
+;
+
+32 
+__u64
+ 
+	t__bôwi£
+ 
+	t__be64
+;
+
+34 
+__u16
+ 
+	t__bôwi£
+ 
+	t__sum16
+;
+
+35 
+__u32
+ 
+	t__bôwi£
+ 
+	t__wsum
+;
+
+46 
+	#__Æig√d_u64
+ 
+__u64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+47 
+	#__Æig√d_be64
+ 
+__be64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+48 
+	#__Æig√d_À64
+ 
+__À64
+ 
+	`__©åibuã__
+((
+	`Æig√d
+(8)))
+
+	)
+
+	@/usr/include/linux/posix_types.h
+
+1 #i‚de‡
+_LINUX_POSIX_TYPES_H
+
+
+2 
+	#_LINUX_POSIX_TYPES_H
+
+
+	)
+
+4 
+	~<löux/°ddef.h
+>
+
+21 #unde‡
+__FD_SETSIZE
+
+
+22 
+	#__FD_SETSIZE
+ 1024
+
+	)
+
+25 
+	mfds_bôs
+[
+__FD_SETSIZE
+ / (8 * ())];
+
+26 } 
+	t__kî√l_fd_£t
+;
+
+29 (*
+	t__kî√l_sigh™dÀr_t
+)();
+
+32 
+	t__kî√l_key_t
+;
+
+33 
+	t__kî√l_mqd_t
+;
+
+35 
+	~<asm/posix_ty≥s.h
+>
+
+	@/usr/include/linux/stddef.h
+
+	@
+1
+.
+1
+/usr/include
+7
+171
+test_arg.c
+test_arg.mod.c
+/usr/include/linux/kernel.h
+/usr/include/linux/sysinfo.h
+/usr/include/linux/types.h
+/usr/include/linux/posix_types.h
+/usr/include/linux/stddef.h

@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/CH_DRIVER/char_dev.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/CH_DRIVER/char_dev.ko /home/spanidea/Arth/CH_DRIVER/char_dev.o /home/spanidea/Arth/CH_DRIVER/char_dev.mod.o

@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/CH_DRIVER_DYM/char_div_dym.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/CH_DRIVER_DYM/char_div_dym.ko /home/spanidea/Arth/CH_DRIVER_DYM/char_div_dym.o /home/spanidea/Arth/CH_DRIVER_DYM/char_div_dym.mod.o
