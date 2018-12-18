@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/test_arg.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/test_arg.ko /home/spanidea/Arth/test_arg.o /home/spanidea/Arth/test_arg.mod.o

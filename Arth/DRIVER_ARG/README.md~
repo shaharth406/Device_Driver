@@ -1,0 +1,21 @@
+File : test_arg.c
+Description :
+		This file is a simple parameter passing module. 
+		Contains basic module_init and module_exit functions and while inserting driver we have to pass parameter.
+                module_param() macro is used and predefined in moduleparam.h 
+                module_param(name,type,permission).
+		
+Steps to compile :
+1.Run				make
+2.Insert module			sudo insmod param.ko valParam = 2
+3.See the added module		cat /proc/modules | grep param
+4.See the logs in dmesg 	dmesg | tail -2
+  kernel ring buffer	
+5.Remove module			sudo rmmod param
+6.See the logs in dmesg 	dmesg | tail -2
+7.Run				make clean
+
+
+Keypoints to remember:
+module_param();
+module_param(name,type,permission);

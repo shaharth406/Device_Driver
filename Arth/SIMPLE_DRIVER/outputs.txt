@@ -1,0 +1,44 @@
+1.Compile file by write Makefile in same folder:
+        make
+  see the output :
+        ls
+
+output : ****************************************************************
+	 *
+hello_world.c  hello_world.ko  hello_world.mod.c  hello_world.mod.o  hello_world.o  Makefile  modules.order  Module.symvers  README.md
+
+	 *
+	 ***************************************************************
+2.Insert module : 
+	sudo insmod hello.ko
+   See the output :
+	dmesg | tail -3
+
+output : ****************************************************************
+	 *
+[  900.904124] Module inserted Successfully..
+[  900.904126] File : /home/spanidea/Arth/DRIVER/hello_world.c, function : hello_init, line : 55
+
+	 *
+	 ***************************************************************
+3. See the modules that get inserted:
+	cat /proc/modules | grep hello
+
+output : **************************************************************
+
+	hello_world 16384 0 - Live 0x0000000000000000 (OE)
+
+	 **************************************************************
+
+4. Remove module
+	sudo rmmod hello
+   See the output :
+	dmesg | tail -3
+
+output : **************************************************************
+	 *
+[ 1910.056499] Module removed Successfully..
+[ 1910.056509] File : /home/spanidea/Arth/DRIVER/hello_world.c, function : hello_exit, line : 69
+
+	 *
+	 **************************************************************

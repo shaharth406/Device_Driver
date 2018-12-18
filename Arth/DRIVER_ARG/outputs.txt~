@@ -1,0 +1,45 @@
+1.Compile file by write Makefile in same folder:
+        make
+  see the output :
+        ls
+
+output : ****************************************************************
+	 *Makefile  modules.order  Module.symvers  outputs.txt  test_arg.c  test_arg.ko  test_arg.mod.c  test_arg.mod.o  test_arg.o  README.md
+	 *
+	 ***************************************************************
+2.Insert module : 
+	sudo insmod test_arg.ko value=20 arr_value=100,200,300,400 name="Arth_Shah"
+   See the output :
+	dmesg | tail -10
+
+output : ****************************************************************
+[ 6800.238041] Value = 20  
+[ 6800.238044] cb_value = 0  
+[ 6800.238045] Name = Arth_Shah 
+[ 6800.238046] arr_value[0] = 100
+[ 6800.238047] arr_value[1] = 200
+[ 6800.238048] arr_value[2] = 300
+[ 6800.238049] arr_value[3] = 400
+[ 6800.238050] Kernel Module Inserted Successfully...
+
+	 *
+	 ***************************************************************
+3. See the modules that get inserted:
+	cat /proc/modules | grep test_arg
+
+output : **************************************************************
+	 * test_arg 16384 0 - Live 0x0000000000000000 (OE)
+	 **************************************************************
+
+4. Remove module
+	sudo rmmod test_arg
+   See the output :
+	dmesg | tail -10
+
+output : **************************************************************
+	 *
+	 [20386.222747] in param_exit function
+         [20386.222749] Exiting 
+
+	 *
+	 **************************************************************
