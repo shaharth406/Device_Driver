@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/interrupt/interrupts.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/interrupt/interrupts.ko /home/spanidea/Arth/interrupt/interrupts.o /home/spanidea/Arth/interrupt/interrupts.mod.o
