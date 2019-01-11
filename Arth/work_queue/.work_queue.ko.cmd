@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/work_queue/work_queue.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/work_queue/work_queue.ko /home/spanidea/Arth/work_queue/work_queue.o /home/spanidea/Arth/work_queue/work_queue.mod.o
