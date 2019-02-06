@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Arth/ioctl/ioctl.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Arth/ioctl/ioctl.ko /home/spanidea/Arth/ioctl/ioctl.o /home/spanidea/Arth/ioctl/ioctl.mod.o
