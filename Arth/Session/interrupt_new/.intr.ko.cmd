@@ -1,0 +1,1 @@
+cmd_/home/spanidea/Session/interrupt_new/intr.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/spanidea/Session/interrupt_new/intr.ko /home/spanidea/Session/interrupt_new/intr.o /home/spanidea/Session/interrupt_new/intr.mod.o

@@ -1,0 +1,54 @@
+1.Build the module using make command
+	$ make
+	
+output:********************************************************************************************	
+	make -C /lib/modules/4.4.0-137-generic/build  M=/home/spanidea/Mayur/Session2/interrupt modules
+	make[1]: Entering directory `/usr/src/linux-headers-4.4.0-137-generic'
+ 	CC [M]  /home/spanidea/Mayur/Session2/interrupt/intr.o
+  	Building modules, stage 2.
+ 	MODPOST 1 modules
+  	CC      /home/spanidea/Mayur/Session2/interrupt/intr.mod.o
+  	LD [M]  /home/spanidea/Mayur/Session2/interrupt/intr.ko
+	make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-137-generic'
+	***********************************************************************************************
+2.Insert module:
+	$ sudo insmod intr.ko
+ 	$ See the output :
+	$ dmesg | tail -2
+
+output:********************************************************************************************
+	 *
+	 * [ 9251.633465] Major = 242 Minor = 0 
+	 * [ 9251.633529] Device Driver Inserted
+	 *
+	 **********************************************************************************************
+	 
+3.Trigger interrupt : Read device file
+	sudo cat /dev/intr_device
+   	See the output :
+	dmesg |tail -6
+
+output:********************************************************************************************
+	 *	[12513.430675] Major = 244 Minor = 0
+	 *	[12513.430772] Device Driver Inserted  
+	 *	[12587.601936] Device File Opened...!!!
+	 *	[12587.601961] Read function
+	 *	[12587.601971] Interrupt Raised
+	 *	[12587.601980] Device File Closed...!!!
+     **********************************************************************************************
+
+4. Remove module
+	sudo rmmod int_driver
+   	See the output :
+	dmesg | tail -6
+	
+output:********************************************************************************************
+	 *	[12513.430675] Major = 244 Minor = 0 
+	 *	[12587.601936] Device File Opened...!!! 
+	 *	[12587.601961] Read function
+	 *	[12587.601971] Interrupt Raised
+	 *	[12587.601980] Device File Closed...!!!
+	 *	[12736.475585] Device Driver Removed 
+     **********************************************************************************************
+   
+
